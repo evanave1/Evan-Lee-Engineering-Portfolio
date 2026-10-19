@@ -30,7 +30,7 @@ export default function ProjectsIndex() {
           </div>
         </section>
 
-        <section className="mt-12 grid gap-5 lg:grid-cols-3" aria-label="All projects">
+        <section className="mt-12 grid items-start gap-5 lg:grid-cols-3" aria-label="All projects">
           {allProjects.map((project) => (
             <Link href={`/projects/${project.slug}`} className="group block overflow-hidden border border-white/15 bg-panel transition-transform duration-300 hover:-translate-y-2" key={project.id}>
               <div className="relative aspect-[1.35/1] overflow-hidden border-b border-white/15 bg-[#080b10]">
@@ -38,7 +38,7 @@ export default function ProjectsIndex() {
                 <span className="absolute bottom-4 left-4 bg-paper/85 px-2 py-1 font-mono text-[9px] uppercase tracking-[0.1em] text-electric">{project.heroImage.label}</span>
               </div>
               <div className="p-6">
-                <div className="flex items-start justify-between gap-4 font-mono text-[10px] uppercase tracking-[0.08em] text-muted"><span>{project.id} / {project.period}</span><span className="text-electric">Open ↗</span></div>
+                <div className="flex items-start justify-between gap-4 font-mono text-[10px] uppercase tracking-[0.08em] text-muted"><span>{project.id} / {project.period}</span><span className="text-electric">{project.slug === 'ied-assorted-sketches' ? 'View sketches ↗' : 'Open ↗'}</span></div>
                 <p className="mt-7 font-mono text-[10px] uppercase tracking-[0.08em] text-electric">{project.type}</p>
                 <h2 className="mt-3 text-3xl font-medium leading-[.95] tracking-[-0.07em]">{project.title}</h2>
                 <p className="mt-5 text-sm leading-6 text-muted">{project.overview}</p>

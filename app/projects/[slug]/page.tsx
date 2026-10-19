@@ -74,7 +74,23 @@ export default async function ProjectDetail({ params }: { params: Promise<{ slug
             <a className="font-mono text-[10px] uppercase tracking-[0.08em] text-muted transition-colors hover:text-electric" href={project.sourcePage} target="_blank" rel="noreferrer">Open source portfolio ↗</a>
           </div>
           <div className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-            {project.gallery.map((image, index) => <figure className={`group relative overflow-hidden border border-white/15 bg-[#080b10] ${index === 0 && project.gallery.length > 3 ? 'sm:col-span-2 lg:col-span-2' : ''}`} key={image.src}><div className="relative aspect-[1.35/1]"><Image src={image.src} alt={image.alt} fill sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw" className="object-contain p-4 transition-transform duration-700 group-hover:scale-[1.025]" /></div><figcaption className="border-t border-white/15 px-4 py-3 font-mono text-[9px] uppercase tracking-[0.1em] text-electric">{image.label}</figcaption></figure>)}
+            {project.gallery.map((image, index) => {
+              const isSketchGallery = project.slug === 'ied-assorted-sketches'
+              const imageLinkLabel = isSketchGallery
+                ? `Open sketch ${String(index + 1).padStart(2, '0')} at full size`
+                : `Open ${image.alt} at full size`
+
+              return (
+                <figure className={`group relative overflow-hidden border border-white/15 bg-[#080b10] ${index === 0 && project.gallery.length > 3 ? 'sm:col-span-2 lg:col-span-2' : ''}`} key={image.src}>
+                  <a href={image.src} target="_blank" rel="noreferrer" aria-label={imageLinkLabel} className="block cursor-zoom-in">
+                    <div className="relative aspect-[1.35/1]">
+                      <Image src={image.src} alt={image.alt} fill sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw" className="object-contain p-4 transition-transform duration-700 group-hover:scale-[1.025]" />
+                    </div>
+                  </a>
+                  <figcaption className="border-t border-white/15 px-4 py-3 font-mono text-[9px] uppercase tracking-[0.1em] text-electric">{image.label} <span aria-hidden="true">↗</span></figcaption>
+                </figure>
+              )
+            })}
           </div>
         </section>
 

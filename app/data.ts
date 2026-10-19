@@ -205,9 +205,9 @@ export const projects: Project[] = [
         label: '05 / UCSD Model / Balsa wood and foam carved',
       },
       {
-        src: '/reference-ied-centraleres-01-cutout.png',
-        alt: 'Centraleres Tower architectural rendering.',
-        label: '06 / Centraleres Tower / Lumion rendering, physical prototyping, SketchUp modeling',
+        src: '/reference-ied-centraleres-night-render.png',
+        alt: 'Centraleres Tower night render.',
+        label: '06 / Centraleres Tower / Night render',
       },
     ],
     overview: 'Introduction to Engineering Design (IED) & Civil Engineering and Architecture (CEA). Introductory high school engineering courses (2022 - 2024).',
@@ -462,9 +462,9 @@ export const iedSubprojects: Project[] = [
     result: 'Centraleres Tower',
     tools: ['Lumion rendering, physical prototyping, SketchUp modeling'],
     heroImage: {
-      src: '/reference-ied-centraleres-01-cutout.png',
-      alt: 'Centraleres Tower architectural rendering.',
-      label: 'Lumion rendering, physical prototyping, SketchUp modeling',
+      src: '/reference-ied-centraleres-night-render.png',
+      alt: 'Centraleres Tower night render.',
+      label: 'Night render / Lumion rendering',
     },
     gallery: [
       {
