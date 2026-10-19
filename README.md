@@ -33,7 +33,7 @@ The selected-work cards link to dedicated detail pages, and `/projects` provides
 - `/projects/ied-ucsd-model`
 - `/projects/ied-centraleres-tower`
 
-Each page includes source imagery, expanded process notes, tools, and documented deliverables. The IED / CEA model renders use transparent cutouts, the sketch studies preserve their source scans and open full-size when clicked, and the muffler CAD images remain as original technical renders.
+Each page includes source imagery, expanded process notes, tools, and documented deliverables. The IED / CEA model renders use transparent cutouts, the sketch studies preserve their source scans and open full-size when clicked, the Special Thanks photos use transparent people cutouts, and the muffler CAD images remain as original technical renders.
 
 ## Resume-backed sections
 

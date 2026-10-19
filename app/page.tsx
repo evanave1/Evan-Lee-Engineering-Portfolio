@@ -228,7 +228,7 @@ export default function Home() {
           <Reveal><p className="font-mono text-[10px] uppercase tracking-[0.08em] text-muted">Acknowledgements / Digifolio</p><h2 className="mt-5 max-w-[8ch] text-6xl font-medium leading-[.9] tracking-[-0.085em] sm:text-8xl">Special <span className="text-electric">thanks.</span></h2></Reveal>
           <Reveal delay={0.1} className="max-w-3xl">
             <div className="grid gap-4 sm:grid-cols-3">
-              {specialThanksImages.map((image) => <div className="group relative aspect-[4/3] overflow-hidden border border-white/15 bg-paper" key={image.src}><Image className="object-cover transition-transform duration-700 group-hover:scale-[1.03]" src={image.src} alt={image.alt} fill sizes="(min-width: 1024px) 28vw, 90vw" /></div>)}
+              {specialThanksImages.map((image) => <div className="group relative aspect-[4/3] overflow-hidden border border-white/15 bg-[#080b10]" key={image.src}><Image className="object-contain p-2 transition-transform duration-700 group-hover:scale-[1.03]" src={image.src} alt={image.alt} fill sizes="(min-width: 1024px) 28vw, 90vw" /></div>)}
             </div>
             <div className="mt-10 border-t border-white/15">{specialThanks.map((thanks, index) => <p className="border-b border-white/15 py-6 text-xl leading-[1.2] tracking-[-0.04em] text-ink" key={thanks}><span className="mr-4 font-mono text-[10px] text-electric">0{index + 1}</span>{thanks}</p>)}</div>
           </Reveal>

@@ -44,9 +44,9 @@ export const specialThanks = [
 ]
 
 export const specialThanksImages = [
-  { src: '/about-support-01.jpg', alt: 'Evan H Lee with a mentor at a school event.' },
-  { src: '/about-support-02.jpg', alt: 'Evan H Lee with engineering teammates and a mentor.' },
-  { src: '/about-support-03.jpg', alt: 'Evan H Lee with a student group.' },
+  { src: '/about-support-01-cutout.png', alt: 'Transparent cutout of Evan H Lee with a mentor at a school event.' },
+  { src: '/about-support-02-cutout.png', alt: 'Transparent cutout of Evan H Lee with engineering teammates and a mentor.' },
+  { src: '/about-support-03-cutout.png', alt: 'Transparent cutout of Evan H Lee with a student group.' },
 ]
 
 
